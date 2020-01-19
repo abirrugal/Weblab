@@ -1,97 +1,100 @@
-.bg-own {
-    min-height: 4rem;
-    background-color: #563d7c;
-    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0,0,0,.1);
-   
-    
-}
-.navbar-dark{
-     font-family: Roboto Slab;
-	font-size: 1.1rem;
-    font-weight: 400;
-    line-height: 1.5;
-}
-
-.navbar-dark .navbar-nav .nav-link{
-	padding-right: .5rem;
-    padding-left: .5rem;
-    color: #cbbde2;
-}
-.nav-link{
-	display: block;
-    padding: .5rem 1rem;
-    padding-top: 0.5rem;
-    padding-right: 1rem;
-    padding-bottom: 0.5rem;
-    padding-left: 1rem;
-}
-a {
-    color: #007bff;
-    text-decoration: none;
-    text-decoration-line: none;
-    text-decoration-style: initial;
-    text-decoration-color: initial;
-    background-color: transparent;
-}
-
-.navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .active > .nav-link{
-	color: #fff;
-    background-color: transparent;
-}
-
-
-body {
+body{
     margin: 0;
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #212529;
-    text-align: left;
-    background-color: #fff;
-}
-.navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
-    color:#fff;
-}
-
-.navbar-brand1{
-
-   height: 60px;
-   width: 65px;
-}
-
-#navbarid {
-    color: rgba(255,255,255,1.0);
-}
-.ts{
-
-    font-size: 1.3rem;
-    font-family: Gayathri;
-    line-height: 50px;
-    height: 50px;
-}
-
-.new{
-    border-top: 1px black solid;
-    border-bottom: 1px black solid;
-    padding-left: 2rem;
-    background-color:grey;
-    font-size: 1rem;
-    font-weight: 500;
-    color: #fff;
-    padding: 0.7rem;
-    margin: 0.7rem 0.2rem;
-
-}
-
-@media only screen and (max-width: 576px) {
-
-    .navbar-dark{
-     font-family: Roboto Slab;
-	font-size: 0.9rem;
-    font-weight: 200;
+    padding: 0;
+    font-family: sans-serif;
     
 }
- 
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 100px;
+    background: #262626;
+    width: 100%;
+    box-sizing: border-box;
 }
 
+header .logo
+{
+    color: #fff;
+    height: 50px;
+    line-height: 50px;
+    font-size: 24px;
+    float: left;
+    font-weight: bold;
+}
+header nav{
+    float: right;
+}
+header nav ul{
+
+    margin: 0;
+    padding: 0;
+    display: flex;
+    
+}
+
+header nav ul li{
+    list-style: none;
+}
+
+#a{
+
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    color:#fff;
+    text-decoration: none;
+    display: block;
+
+}
+header nav ul li a:hover,
+header nav ul li a.active{
+    color: #fff;
+    background: #2196f3;
+}
+.menu-toggle{
+
+    color: #fff;
+    float: right;
+    line-height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+@media(max-width: 991px){
+
+
+header{
+    padding: 0 20px;
+}
+.menu-toggle{
+
+    display: block;
+}
+header nav {
+
+    
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 50px);
+    background: #333;
+    top: 50px;
+    left: -100%;
+    transition: 0.5s;
+}
+header nav.active{
+    left: 0;
+
+}
+header nav ul{
+
+    display: block;
+    text-align: center;
+}
+
+header nav ul li a{
+    border-bottom: 1px solid rgba(0,0,0,.2);
+}
+}
